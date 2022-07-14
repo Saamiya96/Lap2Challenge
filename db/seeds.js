@@ -5,23 +5,30 @@ db.post.drop()
 db.post.insertMany([
     {
         id: 1,
-        title: "hello",
-        name: "taro",
-        story: "if you go down to the woods today",
-        date: "7 / 7 / 2012"
+        title: "I had a thought...",
+        name: "Bob Newhart",
+        story: "The only way to survive is to have a sense of humour",
+        date: "2022-07-14"
     },
     {
         id: 2,
-        title: "goodbye",
+        title: "Money Tips #5574",
         name: "saamiya",
-        story: "nice to meet, you, please come again",
-        date: "7 / 7 / 2012"
+        story: "Always borrow money from a pessimist, he won't expect it back",
+        date: "2022-07-14"
     },
     {
         id: 3,
-        title: "welcome back",
-        name: "nova",
-        story: "my name is nova, short for supernova",
-        date: "7 / 7 / 2012"
+        title: "Cats are better than dogs",
+        name: "Nova",
+        story: "Cats are cooler, thank you for listening to my Ted Talk.",
+        date: "2022-07-14"
+    },
+    {
+        id: 4,
+        title: "Mr Playwright",
+        name: "William Shakespeare",
+        story: "Some are born great, some achieve greatness, and some have greatness thrust upon them.",
+        date: "2022-07-14"
     }
 ]) 

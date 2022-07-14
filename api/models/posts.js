@@ -17,11 +17,7 @@ class Post {
             try {
                 const db = await init()
                 const postData = await db.collection('post').find().toArray()
-                // console.log("*******************")
-                // console.log(postData)
-                // console.log("*******************")
                 const posts = postData.map(p => new Post({ ...p, id: p._id }))
-                // if (!posts.length) {throw new Error("No posts here")}
                 console.log(posts)
                 resolve(posts)
             } catch (err) {
@@ -50,14 +46,11 @@ class Post {
 
 
     static create(title, name, story, date) {
+        if (!name)  name = "Anonymous"
         return new Promise(async (resolve, reject) => {
             try {
                 const db = await init()
                 let postData = await db.collection('post').insertOne({ title, name, story, date })
-                //   console.log('&&&&&&&&   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
-                //   console.log('hiiiiiiii',postData)
-                // let newPost = new Post(postData)
-                //  console.log('hiiiiiiii',newPost)
                 resolve(postData);
             } catch (err) {
                 reject(`Error creating posts`)
